@@ -59,7 +59,7 @@ not_found do
 end
 
 at_exit do
-  File.write(settings.history_file, settings.history.to_yaml)
+  # File.write(settings.history_file, settings.history.to_yaml)
 end
 
 get '/' do
