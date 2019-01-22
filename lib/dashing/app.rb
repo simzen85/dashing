@@ -160,7 +160,8 @@ def first_dashboard
 end
 
 def tilt_html_engines
-  LegacyTiltProcessor.mappings.select do |_, engines|
+  mapping = Tilt::Mapping.new
+  mapping.select do |_, engines|
     default_mime_type = engines.first.default_mime_type
     default_mime_type.nil? || default_mime_type == 'text/html'
   end
